@@ -37,4 +37,6 @@ These are the following DAX (Measures) :
    
 ## Visualisation 
 <img width="1566" height="884" alt="Screenshot 2025-11-04 095002" src="https://github.com/user-attachments/assets/56be140f-f743-4bf9-9d80-db283033ba66" />
+<img width="1534" height="860" alt="Dashboard Page 2" src="https://github.com/user-attachments/assets/3f8e43e3-6df8-484f-9229-c7505c0c5585" />
+<img width="1536" height="872" alt="Dashboard Page 3" src="https://github.com/user-attachments/assets/cdbf752f-4546-4e1a-81b7-941ef1ccd054" />
 
