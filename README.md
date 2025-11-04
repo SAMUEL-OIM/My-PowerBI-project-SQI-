@@ -30,5 +30,9 @@ I connected the relationship between the tables using the primary and foreign ke
 These are the following DAX (Measures) :
 - To get the Total no. of complaints
   DAX EXPRESSION
-   ```Total Complaints = Count('ComplaintsTable', Complaint_ID)```
+   ```
+   Total Complaints = Count('ComplaintsTable', Complaint_ID)
+  ```
+   
 ## Visualisation 
+g
