@@ -48,12 +48,33 @@ These are the following DAX (Measures) :
    ```
    Total Complaints = Count('ComplaintsTable', Complaint_ID)
   ```
-   - To get the Total no. of Companies
+- To get the Total Complaint of the previous year
+  DAX EXPRESSION
+   ```
+   Prev_Complaint_Year = CALCULATE([Total Complaint],DATEADD(Calendar_Date[Date],-1,YEAR))
+  ```
+- To get the Total no. of Companies
   DAX EXPRESSION
    ```
    Total Companies = Count('ComplaintsTable', Company_ID)
   ```
-   
+   - To the percentage margin of the complaints comppared to the previous year
+  DAX EXPRESSION
+   ```
+   %_Complaint_Year = DIVIDE([Total Complaint] - [Prev_Complaint_Year] ,[Prev_Complaint_Year])
+  ```
+     - To add color to the margin either green or red and include arrow indicating rise low in the number of complaints
+  DAX EXPRESSION
+   ```
+          Complaint % design = VAR uparrow = UNICHAR(9650)
+                               VAR downarrow = UNICHAR(9660)
+                               VAR complain_per = [%_Complaint_Year]
+                               RETURN
+          SWITCH(TRUE(), Complain_per > 0 , FORMAT(Complain_per, "0.00") & "%" & uparrow,
+                   Complain_per < 0 ,  FORMAT(Complain_per, "0.00") & "%" & downarrow)
+     ```
+  
+  
 ## Visualisation 
 <img width="1566" height="884" alt="Screenshot 2025-11-04 095002" src="https://github.com/user-attachments/assets/56be140f-f743-4bf9-9d80-db283033ba66" />
 <img width="1534" height="860" alt="Dashboard Page 2" src="https://github.com/user-attachments/assets/3f8e43e3-6df8-484f-9229-c7505c0c5585" />
